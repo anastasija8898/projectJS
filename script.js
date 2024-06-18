@@ -64,3 +64,52 @@
 // if (hamburger && cola || fries === 3 && nuggets) {
 //    console.log('Done!')
 // }
+
+// for (let i = 1; i < 7; i++) {
+//   let j = 0;
+//   let text = "";
+//   while (j < i) {
+//     text += "*";
+//     j++;
+//   }
+//   console.log(text);
+// }
+
+//  <======== LESSON 23 ========>
+//   1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
+
+// 2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
+// отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит -
+// возвращаем пользователя к вопросам опять
+
+// 3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
+// "Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше -
+// "Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
+
+// 4) Потренироваться и переписать цикл еще двумя способами*/
+
+// let numberOfFilms = +prompt("How mane films have you watched?", 1);
+// let personalMovieDB = {
+//   count: numberOfFilms,
+//   movies: {},
+//   actors: {},
+//   genres: [],
+//   private: false,
+// };
+// for (let i = 0; i < numberOfFilms; i++) {
+//   let movie = prompt("What was the latest movie?");
+//   if (movie == null || movie === "" || movie.length > 50) {
+//     console.log(movie);
+//     i--;
+//     continue;
+//   }
+//   let rating = prompt("Rating of this movie: ");
+//   if (rating == null || rating === "") {
+//     i--;
+//     continue;
+//   }
+//   personalMovieDB.movies[movie] = rating;
+// }
+
+// console.log(numberOfFilms);
+// console.log(personalMovieDB);
