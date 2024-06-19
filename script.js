@@ -1,4 +1,31 @@
 "use strict";
+//  <======== CODING EXERCISE 6 ========>
+// function sayHello(name) {
+//   return `Привет,${name}`;
+// }
+// console.log(sayHello("Антон"));
+
+// function returnNeighboringNumbers(num) {
+//   return [num-1,num,num+1];
+// }
+// console.log(returnNeighboringNumbers(5));
+
+// function getMathResult(base, count) {
+//   if (count <= 0) return base;
+//   let res = "";
+//   for (let i = 1; i <= count; i++){
+//       res += base*i + (i===count?"":"---");
+//   }
+//   return res;
+// }
+
+// console.log(getMathResult(5,""));
+
+//  <======== LESSON 24 ========>
+// function showFirstMessage(text) {
+//   console.log(text);
+// }
+// showFirstMessage("Hello, world");
 
 // const category = "toys";
 // console.log(`https://url.com/${category}`);
