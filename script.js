@@ -1,4 +1,106 @@
 "use strict";
+
+// Числа Фибоначчи!!!
+// function fib(length) {
+//   if (typeof length !== 'number' || length <= 0 || !Number(length))
+//       return "";
+//   let arr = [0, 1];
+//   let str = "";
+//   for(let i = 0; i < length; i++){
+//       if(i === 0)
+//           str += "0";
+//       else if(i === 1)
+//           str += " 1";
+//       else{
+//           arr[i] = arr[i-1]+arr[i-2];
+//           str += ` ${arr[i]}`;
+//       }
+//   }
+//   return str;
+// }
+
+// function fib1(num) {
+//   if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
+//       return "";
+//   }
+
+//   let result = '';
+//   let first = 0;
+//   let second = 1;
+
+//   for (let i = 0; i < num; i++) {
+//       if (i + 1 === num) {
+//           result += `${first}`;
+//           // Без пробела в конце
+//       } else {
+//           result += `${first} `;
+//       }
+
+//       let third = first + second;
+//       first = second;
+//       second = third;
+//   }
+
+//   return result;
+// }
+
+// console.log(fib(7))
+
+// function findMaxNumber(num1, num2, num3, num4) {
+//   let arr = [num1, num2, num3, num4];
+//   for (let i = 0; i < arr.length; i++){
+//       if (typeof arr[i] !== 'number')
+//           return 0;
+//   }
+//   let max = Math.max(num1, num2, num3, num4);
+//   // for (let i = 1; i < arr.length; i++){
+//   //     if (arr[i] > max)
+//   //         max = arr[i];
+//   //}
+//   return max;
+// }
+
+// console.log(findMaxNumber(1, 5, '6', '10'))
+
+// function getTimeFromMinutes(num) {
+//   if (isNaN(num) || num < 0 || !Number.isInteger(num))
+//       return "Ошибка, проверьте данные";
+//   let h = Math.floor(num / 60);
+//   let m = num % 60;
+//   let strH = h.toString();
+//   strH = strH.slice(strH.length-1)
+//   strH = Number(strH)
+//   if (strH === 0 || (strH >= 5 && strH <= 9) || (h >= 11 && h <= 20)){
+//       return `Это ${h} часов и ${m} минут`;
+//   } else if (strH === 1) {
+//       return `Это ${h} час и ${m} минут`;
+//   } else if (strH >= 2 && strH <= 4){
+//       return `Это ${h} часа и ${m} минут`;
+//   }
+// }
+
+// console.log(getTimeFromMinutes(-50))
+
+// let num = 700;
+// let h = Math.floor(num / 60);
+// let m = num % 60;
+// let strH = h.toString();
+//  strH = strH.slice(strH.length-1)
+// console.log(strH)
+
+// console.log(isNaN(125));
+
+// function getCoupeNumber(num) {
+//   if(isNaN(num) ||  !Number.isInteger(num) || num < 0){
+//       return "Ошибка. Проверьте правильность введенного номера места";
+//   } else if (num < 1 || num > 36) {
+//       return "Таких мест в вагоне не существует";
+//   }
+//   let res = Math.ceil(num/4);
+//   return res;
+// }
+// console.log(getCoupeNumber(37.5));
+
 //  <======== CODING EXERCISE 6 ========>
 // function sayHello(name) {
 //   return `Привет,${name}`;
