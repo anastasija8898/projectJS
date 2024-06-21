@@ -1,5 +1,49 @@
 "use strict";
 
+const someString = "This is some strange string";
+
+function reverse(str) {
+  if (typeof str !== "string") return "Ошибка!";
+  const newString = str.split("").reverse().join("");
+  console.log(newString);
+  return newString;
+}
+
+reverse(someString);
+
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%'
+//         },
+//         exp: '1 month'
+//     },
+//     showAgeAndLangs: ((obj) => {
+//         let text = `Мне ${obj.age} и я владею языками`;
+//         for (let key in obj.skills.languages){
+//             lang = obj.skills.languagesp[key].toUpperCase()
+//             text += ` ${lang}`;
+//         }
+//         return text;
+//     })
+// };
+
+// function showExperience(plan) {
+
+//     //console.log(Object.keys(plan.length).length)
+//     const {age} = plan;
+//     console.log(age)
+
+// }
+
+// console.log(showExperience(personalPlanPeter));
+// let arr=[1,2,3];
+// console.log([...arr]);
+
 // Числа Фибоначчи!!!
 // function fib(length) {
 //   if (typeof length !== 'number' || length <= 0 || !Number(length))
