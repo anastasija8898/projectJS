@@ -1,15 +1,69 @@
 "use strict";
 
-const someString = "This is some strange string";
+const students = [
+  "Peter",
+  "Andrew",
+  "Ann",
+  "Mark",
+  "Josh",
+  "Sandra",
+  "Cris",
+  "Bernard",
+  "Takesi",
+  "Sam",
+  "Sam",
+];
 
-function reverse(str) {
-  if (typeof str !== "string") return "Ошибка!";
-  const newString = str.split("").reverse().join("");
-  console.log(newString);
-  return newString;
+function sortStudentsByGroups(arr) {
+  const newArr = [];
+  arr.sort();
+  console.log(arr);
+  for (let i = 0; i < 9; i += 3) {
+    let arrSt = [];
+    for (let j = i; j < i + 3; j++) {
+      arrSt.push(arr[j]);
+    }
+    newArr.push(arrSt);
+  }
+  if (arr.length > 9) {
+    let str = arr.slice(9);
+    str = str.join(", ");
+    newArr.push(str);
+  } else {
+    newArr.push("-");
+  }
+  return newArr;
 }
 
-reverse(someString);
+console.log(sortStudentsByGroups(students));
+
+// const baseCurrencies = ["USD", "EUR"];
+// const additionalCurrencies = ["UAH", "RUB", "CNY"];
+
+// function availableCurr(arr, missingCurr) {
+//   const array = [...arr];
+//   delete array[missingCurr];
+//   console.log(array);
+//   let message = "Доступные валюты:";
+//   array.forEach((item) => {
+//     message += `\n${item}`;
+//   });
+//   console.log(message);
+//   return message;
+// }
+
+// console.log(availableCurr(baseCurrencies, "EUR"));
+
+// const someString = "This is some strange string";
+
+// function reverse(str) {
+//   if (typeof str !== "string") return "Ошибка!";
+//   const newString = str.split("").reverse().join("");
+//   console.log(newString);
+//   return newString;
+// }
+
+// reverse(someString);
 
 // const personalPlanPeter = {
 //     name: "Peter",
