@@ -1,41 +1,111 @@
 "use strict";
 
-const students = [
-  "Peter",
-  "Andrew",
-  "Ann",
-  "Mark",
-  "Josh",
-  "Sandra",
-  "Cris",
-  "Bernard",
-  "Takesi",
-  "Sam",
-  "Sam",
-];
+const restorantData = {
+  menu: [
+    {
+      name: "Salad Caesar",
+      price: "14$",
+    },
+    {
+      name: "Pizza Diavola",
+      price: "9$",
+    },
+    {
+      name: "Beefsteak",
+      price: "17$",
+    },
+    {
+      name: "Napoleon",
+      price: "7$",
+    },
+  ],
+  waitors: [
+    { name: "Alice", age: 22 },
+    { name: "John", age: 24 },
+  ],
+  averageLunchPrice: "20$",
+  openNow: true,
+};
 
-function sortStudentsByGroups(arr) {
-  const newArr = [];
-  arr.sort();
-  console.log(arr);
-  for (let i = 0; i < 9; i += 3) {
-    let arrSt = [];
-    for (let j = i; j < i + 3; j++) {
-      arrSt.push(arr[j]);
-    }
-    newArr.push(arrSt);
-  }
-  if (arr.length > 9) {
-    let str = arr.slice(9);
-    str = str.join(", ");
-    newArr.push(str);
-  } else {
-    newArr.push("-");
-  }
-  return newArr;
+function isOpen(prop) {
+  let answer = "";
+  prop ? (answer = "Открыто") : (answer = "Закрыто");
+
+  return answer;
 }
 
-console.log(sortStudentsByGroups(students));
+console.log(isOpen(restorantData.openNow));
+
+function isAverageLunchPriceTrue(fDish, sDish, average) {
+  debugger;
+  console.log(+fDish.price.slice(0, -1) + +sDish.price.slice(0, -1));
+  if (+fDish.price.slice(0, -1) + +sDish.price.slice(0, -1) < average) {
+    return "Цена ниже средней";
+  } else {
+    return "Цена выше средней";
+  }
+}
+
+console.log(
+  isAverageLunchPriceTrue(
+    restorantData.menu[3],
+    restorantData.menu[1],
+    restorantData.averageLunchPrice
+  )
+);
+
+function transferWaitors(data) {
+  //const copy = Object.assign({}, data);
+  const copy = { ...data };
+
+  copy.waitors[0] = { name: "Mike", age: 32 };
+  return copy;
+}
+
+transferWaitors(restorantData);
+console.log(restorantData);
+
+// const a = [1, 2, 3],
+//   b = [1, 2, 4];
+
+// console.log(a === b);
+
+// const students = [
+//   "Peter",
+//   "Andrew",
+//   "Ann",
+//   "Mark",
+//   "Josh",
+//   "Sandra",
+//   "Cris",
+//   "Bernard",
+//   "Takesi",
+//   "Sam",
+//   "Sam",
+// ];
+
+// function sortStudentsByGroups(arr) {
+//   const newArr = [];
+//   arr.sort();
+//   console.log(arr);
+//   for (let i = 0; i < 9; i += 3) {
+//     let arrSt = [];
+//     for (let j = i; j < i + 3; j++) {
+//       arrSt.push(arr[j]);
+//     }
+//     newArr.push(arrSt);
+//   }
+//   if (arr.length > 9) {
+//     let str = arr.slice(9);
+//     str = str.join(", ");
+//     newArr.push(str);
+//   } else {
+//     newArr.push("-");
+//   }
+//   return newArr;
+// }
+
+// console.log(sortStudentsByGroups(students));
 
 // const baseCurrencies = ["USD", "EUR"];
 // const additionalCurrencies = ["UAH", "RUB", "CNY"];
