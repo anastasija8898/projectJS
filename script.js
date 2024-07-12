@@ -1,69 +1,96 @@
 "use strict";
 
-const restorantData = {
-  menu: [
-    {
-      name: "Salad Caesar",
-      price: "14$",
-    },
-    {
-      name: "Pizza Diavola",
-      price: "9$",
-    },
-    {
-      name: "Beefsteak",
-      price: "17$",
-    },
-    {
-      name: "Napoleon",
-      price: "7$",
-    },
-  ],
-  waitors: [
-    { name: "Alice", age: 22 },
-    { name: "John", age: 24 },
-  ],
-  averageLunchPrice: "20$",
-  openNow: true,
-};
-
-function isOpen(prop) {
-  let answer = "";
-  prop ? (answer = "Открыто") : (answer = "Закрыто");
-
-  return answer;
-}
-
-console.log(isOpen(restorantData.openNow));
-
-function isAverageLunchPriceTrue(fDish, sDish, average) {
-  debugger;
-  console.log(+fDish.price.slice(0, -1) + +sDish.price.slice(0, -1));
-  if (+fDish.price.slice(0, -1) + +sDish.price.slice(0, -1) < average) {
-    return "Цена ниже средней";
-  } else {
-    return "Цена выше средней";
+function factorial(x) {
+  if (typeof x !== "number" || !Number.isInteger(x)) {
+    console.log(x);
+    return "It is not a number";
+  } else if (x <= 0) return 1;
+  else {
+    return x * factorial(x - 1);
   }
 }
 
-console.log(
-  isAverageLunchPriceTrue(
-    restorantData.menu[3],
-    restorantData.menu[1],
-    restorantData.averageLunchPrice
-  )
-);
+console.log(factorial(3));
 
-function transferWaitors(data) {
-  //const copy = Object.assign({}, data);
-  const copy = { ...data };
+// const pow = (x, n) => {
+//   let result = 1;
+//   for (let i = 0; i < n; i++) {
+//     result *= x;
+//   }
+//   return result;
+// };
 
-  copy.waitors[0] = { name: "Mike", age: 32 };
-  return copy;
-}
+// const pow = (x, n) => {
+//   if (n === 1) return x;
+//   else return x * pow(x, n - 1);
+// };
 
-transferWaitors(restorantData);
-console.log(restorantData);
+// console.log(pow(2, 3));
+
+// const restorantData = {
+//   menu: [
+//     {
+//       name: "Salad Caesar",
+//       price: "14$",
+//     },
+//     {
+//       name: "Pizza Diavola",
+//       price: "9$",
+//     },
+//     {
+//       name: "Beefsteak",
+//       price: "17$",
+//     },
+//     {
+//       name: "Napoleon",
+//       price: "7$",
+//     },
+//   ],
+//   waitors: [
+//     { name: "Alice", age: 22 },
+//     { name: "John", age: 24 },
+//   ],
+//   averageLunchPrice: "20$",
+//   openNow: true,
+// };
+
+// function isOpen(prop) {
+//   let answer = "";
+//   prop ? (answer = "Открыто") : (answer = "Закрыто");
+
+//   return answer;
+// }
+
+// console.log(isOpen(restorantData.openNow));
+
+// function isAverageLunchPriceTrue(fDish, sDish, average) {
+//   debugger;
+//   console.log(+fDish.price.slice(0, -1) + +sDish.price.slice(0, -1));
+//   if (+fDish.price.slice(0, -1) + +sDish.price.slice(0, -1) < average) {
+//     return "Цена ниже средней";
+//   } else {
+//     return "Цена выше средней";
+//   }
+// }
+
+// console.log(
+//   isAverageLunchPriceTrue(
+//     restorantData.menu[3],
+//     restorantData.menu[1],
+//     restorantData.averageLunchPrice
+//   )
+// );
+
+// function transferWaitors(data) {
+//   //const copy = Object.assign({}, data);
+//   const copy = { ...data };
+
+//   copy.waitors[0] = { name: "Mike", age: 32 };
+//   return copy;
+// }
+
+// transferWaitors(restorantData);
+// console.log(restorantData);
 
 // const a = [1, 2, 3],
 //   b = [1, 2, 4];
